@@ -12,6 +12,7 @@ namespace Mejías_Olivier___Práctica_5
 {
     public partial class frmSuperTickets : Form
     {
+        
         public frmSuperTickets()
         {
             InitializeComponent();
@@ -27,9 +28,6 @@ namespace Mejías_Olivier___Práctica_5
             this.Close();
         }
 
-        private void frmSuperTickets_Load(object sender, EventArgs e)
-        {
-            Entrada miEntrada = new Entrada("Cold Play", 150000);
-        }
+        
     }
 }

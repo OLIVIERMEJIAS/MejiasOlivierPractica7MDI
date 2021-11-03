@@ -226,7 +226,6 @@ namespace Mejías_Olivier___Práctica_5
             this.Name = "frmSuperTickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Super Tickets";
-            this.Load += new System.EventHandler(this.frmSuperTickets_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

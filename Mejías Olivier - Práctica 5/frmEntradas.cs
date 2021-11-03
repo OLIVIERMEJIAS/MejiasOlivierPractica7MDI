@@ -16,5 +16,10 @@ namespace Mejías_Olivier___Práctica_5
         {
             InitializeComponent();
         }
+
+        private void btnCrearEntradas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
