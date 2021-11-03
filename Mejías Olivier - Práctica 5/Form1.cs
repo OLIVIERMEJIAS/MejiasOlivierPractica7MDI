@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Mejías_Olivier___Práctica_5
 {
-    public partial class Form1 : Form
+    public partial class frmSuperTickets : Form
     {
-        public Form1()
+        public frmSuperTickets()
         {
             InitializeComponent();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void mnuSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmSuperTickets_Load(object sender, EventArgs e)
+        {
+            Entrada miEntrada = new Entrada("Cold Play", 150000);
         }
     }
 }
