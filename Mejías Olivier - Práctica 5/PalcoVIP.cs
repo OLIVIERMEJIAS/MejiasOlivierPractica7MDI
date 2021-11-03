@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Mejías_Olivier___Práctica_5
         static int cantidad = 0;
         int ID = 0;
         int bebidas;
-
+        
         //constructor
 
         public PalcoVIP(string eve, double prec, int cantiBeb) : base(eve, prec)

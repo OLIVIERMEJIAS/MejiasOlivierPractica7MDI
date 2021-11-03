@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Mejías_Olivier___Práctica_5
     class General:Entrada
     {
         static int cantidad = 0;
-
+       
         //constructor
 
         public General(string eve, double prec):base(eve,prec)

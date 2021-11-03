@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Mejías_Olivier___Práctica_5
 {
     public partial class frmSuperTickets : Form
     {
+
+       
+        frmEntradas crear;
         
         public frmSuperTickets()
         {
@@ -28,6 +32,23 @@ namespace Mejías_Olivier___Práctica_5
             this.Close();
         }
 
-        
+        private void mnuCrearEntradas_Click(object sender, EventArgs e)
+        {
+            if (crear == null)
+            {
+                crear = new frmEntradas();//instanciar
+                crear.MdiParent = this;
+                //delegado
+                crear.FormClosed += new FormClosedEventHandler(cerrarFormulario);
+                crear.Show();
+            }
+            else
+                crear.Activate();
+        }
+
+        private void cerrarFormulario(object sender, FormClosedEventArgs e)
+        {
+            crear = null;
+        }
     }
 }

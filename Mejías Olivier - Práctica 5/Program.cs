@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Mejías_Olivier___Práctica_5
 {
     static class Program
     {
+       
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
