@@ -9,36 +9,43 @@ namespace Mejías_Olivier___Práctica_5
 {
     class Cliente
     {
-        int ID = 0;
-        int cedula;
+        static int ID = 0;
+        string cedula;
         string nombre;
         string apellido1;
         string apellido2;
-        bool activo;
         int entradasCompradas;
-        ArrayList misEntradas;
+        bool activo;
+        Entrada[] misEntradas;
 
         public Cliente()
         {
             ID += 1; 
-            cedula = 0;
+            cedula = "";
             nombre = "";
             apellido1 = "";
             apellido2 = "";
-            activo = true;
             entradasCompradas = 0;
-            misEntradas = new ArrayList();
+            activo = true;
+            misEntradas = new Entrada[3];
         }
 
-        public Cliente(int ced,string nom,string ape1)
+        public Cliente(string ced,string nom,string ape1)
         {
             ID += 1;
             cedula = ced;
             nombre = nom;
             apellido1 = ape1;
-            misEntradas = new ArrayList();
+            apellido2 = "";
+            entradasCompradas = 0;
+            activo = true;
+            misEntradas = new Entrada[3];
         }
 
+        public string cedulaConsultar()
+        {
+            return cedula;
+        }
         public bool quedanEntradas(int entradCompradas,int entradasVender)
         {
             if (entradCompradas >= entradasVender)

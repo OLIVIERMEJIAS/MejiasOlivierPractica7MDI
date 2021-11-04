@@ -49,6 +49,7 @@ namespace Mejías_Olivier___Práctica_5
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.administrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -115,6 +116,8 @@ namespace Mejías_Olivier___Práctica_5
             // 
             // clientesToolStripMenuItem
             // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.administrarClienteToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -214,6 +217,13 @@ namespace Mejías_Olivier___Práctica_5
             this.toolStripButton6.Text = "toolStripButton6";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
+            // administrarClienteToolStripMenuItem
+            // 
+            this.administrarClienteToolStripMenuItem.Name = "administrarClienteToolStripMenuItem";
+            this.administrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.administrarClienteToolStripMenuItem.Text = "Administrar Cliente";
+            this.administrarClienteToolStripMenuItem.Click += new System.EventHandler(this.administrarClienteToolStripMenuItem_Click);
+            // 
             // frmSuperTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +269,7 @@ namespace Mejías_Olivier___Práctica_5
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem administrarClienteToolStripMenuItem;
     }
 }
 

@@ -16,6 +16,7 @@ namespace Mejías_Olivier___Práctica_5
 
        
         frmEntradas crear;
+        frmClientes cli;
         
         public frmSuperTickets()
         {
@@ -49,6 +50,24 @@ namespace Mejías_Olivier___Práctica_5
         private void cerrarFormulario(object sender, FormClosedEventArgs e)
         {
             crear = null;
+        }
+
+        private void cerrarFormularioClientes(object sender, FormClosedEventArgs e)
+        {
+            cli = null;
+        }
+        private void administrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (cli == null)
+            {
+                cli = new frmClientes();//instanciar
+                cli.MdiParent = this;
+                //delegado
+                cli.FormClosed += new FormClosedEventHandler(cerrarFormularioClientes);
+                cli.Show();
+            }
+            else
+                cli.Activate();
         }
     }
 }

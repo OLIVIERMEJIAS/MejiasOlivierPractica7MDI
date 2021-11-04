@@ -11,6 +11,7 @@ namespace Mejías_Olivier___Práctica_5
         //atributos
         private string evento;
         private double precio;
+        private string tipo;
 
         //Crear clase
         //Crear definir atributos
@@ -27,10 +28,12 @@ namespace Mejías_Olivier___Práctica_5
         /// <param name="ev">Este es el nombre del evento</param>
         /// <param name="monto">Costo de la Entrada</param>
         /// <remarks>Hola esto es una marca</remarks>
-        public Entrada(string ev, double monto)
+        public Entrada(string ev, double monto,string tip)
         {
             evento = ev;
             precio = monto;
+            tipo = tip;
+
         }
 
         /// <summary>

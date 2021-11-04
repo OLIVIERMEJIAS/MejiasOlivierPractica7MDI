@@ -76,7 +76,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtValorPal.Name = "txtValorPal";
             this.txtValorPal.Size = new System.Drawing.Size(100, 20);
             this.txtValorPal.TabIndex = 13;
-            this.txtValorPal.Text = "0";
+            this.txtValorPal.Text = "250000";
             // 
             // label7
             // 
@@ -103,7 +103,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtValorGra.Name = "txtValorGra";
             this.txtValorGra.Size = new System.Drawing.Size(100, 20);
             this.txtValorGra.TabIndex = 11;
-            this.txtValorGra.Text = "0";
+            this.txtValorGra.Text = "125000";
             // 
             // label6
             // 
@@ -120,7 +120,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtValorGen.Name = "txtValorGen";
             this.txtValorGen.Size = new System.Drawing.Size(100, 20);
             this.txtValorGen.TabIndex = 9;
-            this.txtValorGen.Text = "0";
+            this.txtValorGen.Text = "75000";
             // 
             // label5
             // 
@@ -137,7 +137,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtEntradPal.Name = "txtEntradPal";
             this.txtEntradPal.Size = new System.Drawing.Size(100, 20);
             this.txtEntradPal.TabIndex = 5;
-            this.txtEntradPal.Text = "0";
+            this.txtEntradPal.Text = "10";
             // 
             // label3
             // 
@@ -154,7 +154,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtEntradGra.Name = "txtEntradGra";
             this.txtEntradGra.Size = new System.Drawing.Size(100, 20);
             this.txtEntradGra.TabIndex = 3;
-            this.txtEntradGra.Text = "0";
+            this.txtEntradGra.Text = "25";
             // 
             // label2
             // 
@@ -171,7 +171,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtEntradGen.Name = "txtEntradGen";
             this.txtEntradGen.Size = new System.Drawing.Size(100, 20);
             this.txtEntradGen.TabIndex = 1;
-            this.txtEntradGen.Text = "0";
+            this.txtEntradGen.Text = "50";
             // 
             // label1
             // 
@@ -188,6 +188,7 @@ namespace Mejías_Olivier___Práctica_5
             this.txtEvento.Name = "txtEvento";
             this.txtEvento.Size = new System.Drawing.Size(403, 20);
             this.txtEvento.TabIndex = 7;
+            this.txtEvento.Text = "COLD PLAY";
             // 
             // label4
             // 

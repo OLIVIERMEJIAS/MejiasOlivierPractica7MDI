@@ -15,7 +15,7 @@ namespace Mejías_Olivier___Práctica_5
 
         //constructor
 
-        public Gramilla(string eve, double prec) : base(eve, prec)
+        public Gramilla(string eve, double prec,string tipo) : base(eve, prec,tipo)
         {
             cantidad += 1;
             amenidades = "Gorra con luces";

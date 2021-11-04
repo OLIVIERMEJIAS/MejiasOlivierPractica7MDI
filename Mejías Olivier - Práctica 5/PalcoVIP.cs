@@ -15,7 +15,7 @@ namespace Mejías_Olivier___Práctica_5
         
         //constructor
 
-        public PalcoVIP(string eve, double prec, int cantiBeb) : base(eve, prec)
+        public PalcoVIP(string eve, double prec, int cantiBeb,string tipo) : base(eve, prec,tipo)
         {
 
             cantidad += 1;

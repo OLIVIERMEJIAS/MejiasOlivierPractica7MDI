@@ -13,7 +13,7 @@ namespace Mejías_Olivier___Práctica_5
        
         //constructor
 
-        public General(string eve, double prec):base(eve,prec)
+        public General(string eve, double prec,string tipo):base(eve,prec,tipo)
         {
             cantidad += 1;
         }

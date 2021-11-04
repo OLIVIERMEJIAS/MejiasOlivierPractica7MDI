@@ -19,26 +19,29 @@ namespace Mejías_Olivier___Práctica_5
 
         private void btnCrearEntradas_Click(object sender, EventArgs e)
             {
+                Global miGlobal = new Global();
+
                 for (int i = 0; i < Convert.ToInt32(txtEntradGra.Text); i++)
                 {
                     General miGeneral = new General(txtEntradGen.Text,
-                        Convert.ToDouble(txtValorGen.Text));
-
+                    Convert.ToDouble(txtValorGen.Text),"General");
+                     miGlobal.generalAgregar(miGeneral);
                 
                 }
 
                 for (int i = 0; i < Convert.ToInt32(txtEntradGra.Text); i++)
                 {
                     Gramilla miGramilla = new Gramilla(txtEntradGra.Text,
-                        Convert.ToDouble(txtValorGra.Text));
+                        Convert.ToDouble(txtValorGra.Text),"Gramilla");
+                    miGlobal.gramillaAgregar(miGramilla);
 
-                    
-                }
+            }
 
                 for (int i = 0; i < Convert.ToInt32(txtEntradGra.Text); i++)
                 {
                     PalcoVIP miPalco = new PalcoVIP(txtEntradGra.Text,
-                        Convert.ToDouble(txtValorGra.Text),5);
+                        Convert.ToDouble(txtValorGra.Text),5,"PalcoVIP");
+                    miGlobal.palcoAgregar(miPalco);
 
                     
                 }
