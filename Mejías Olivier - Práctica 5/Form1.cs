@@ -17,6 +17,7 @@ namespace Mejías_Olivier___Práctica_5
        
         frmEntradas crear;
         frmClientes cli;
+        frmVenderEntradas venderEntrad;
         
         public frmSuperTickets()
         {
@@ -56,6 +57,11 @@ namespace Mejías_Olivier___Práctica_5
         {
             cli = null;
         }
+
+        private void cerrarFormularioVenderEntradas(object sender, FormClosedEventArgs e)
+        {
+            venderEntrad = null;
+        }
         private void administrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (cli == null)
@@ -68,6 +74,20 @@ namespace Mejías_Olivier___Práctica_5
             }
             else
                 cli.Activate();
+        }
+
+        private void mnuAsignarEntradas_Click(object sender, EventArgs e)
+        {
+            if (venderEntrad == null)
+            {
+                venderEntrad = new frmVenderEntradas();//instanciar
+                venderEntrad.MdiParent = this;
+                //delegado
+                venderEntrad.FormClosed += new FormClosedEventHandler(cerrarFormularioVenderEntradas);
+                venderEntrad.Show();
+            }
+            else
+                venderEntrad.Activate();
         }
     }
 }

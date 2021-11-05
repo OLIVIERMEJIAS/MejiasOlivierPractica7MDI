@@ -38,9 +38,7 @@ namespace Mejías_Olivier___Práctica_5
             this.mnuCrearEntradas = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAsignarEntradas = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.administrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
@@ -49,9 +47,7 @@ namespace Mejías_Olivier___Práctica_5
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.administrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,15 +100,16 @@ namespace Mejías_Olivier___Práctica_5
             // mnuCrearEntradas
             // 
             this.mnuCrearEntradas.Name = "mnuCrearEntradas";
-            this.mnuCrearEntradas.Size = new System.Drawing.Size(180, 22);
+            this.mnuCrearEntradas.Size = new System.Drawing.Size(162, 22);
             this.mnuCrearEntradas.Text = "Crear Entradas";
             this.mnuCrearEntradas.Click += new System.EventHandler(this.mnuCrearEntradas_Click);
             // 
             // mnuAsignarEntradas
             // 
             this.mnuAsignarEntradas.Name = "mnuAsignarEntradas";
-            this.mnuAsignarEntradas.Size = new System.Drawing.Size(180, 22);
+            this.mnuAsignarEntradas.Size = new System.Drawing.Size(162, 22);
             this.mnuAsignarEntradas.Text = "Asignar Entradas";
+            this.mnuAsignarEntradas.Click += new System.EventHandler(this.mnuAsignarEntradas_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -122,28 +119,12 @@ namespace Mejías_Olivier___Práctica_5
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
-            // statusStrip1
+            // administrarClienteToolStripMenuItem
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(41, 17);
-            this.toolStripStatusLabel1.Text = "Fecha:";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(36, 17);
-            this.toolStripStatusLabel2.Text = "Hora:";
+            this.administrarClienteToolStripMenuItem.Name = "administrarClienteToolStripMenuItem";
+            this.administrarClienteToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.administrarClienteToolStripMenuItem.Text = "Administrar Cliente";
+            this.administrarClienteToolStripMenuItem.Click += new System.EventHandler(this.administrarClienteToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -217,20 +198,12 @@ namespace Mejías_Olivier___Práctica_5
             this.toolStripButton6.Text = "toolStripButton6";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
-            // administrarClienteToolStripMenuItem
-            // 
-            this.administrarClienteToolStripMenuItem.Name = "administrarClienteToolStripMenuItem";
-            this.administrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.administrarClienteToolStripMenuItem.Text = "Administrar Cliente";
-            this.administrarClienteToolStripMenuItem.Click += new System.EventHandler(this.administrarClienteToolStripMenuItem_Click);
-            // 
             // frmSuperTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -239,8 +212,6 @@ namespace Mejías_Olivier___Práctica_5
             this.Text = "Super Tickets";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -258,9 +229,6 @@ namespace Mejías_Olivier___Práctica_5
         private System.Windows.Forms.ToolStripMenuItem mnuCrearEntradas;
         private System.Windows.Forms.ToolStripMenuItem mnuAsignarEntradas;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbGuardar;

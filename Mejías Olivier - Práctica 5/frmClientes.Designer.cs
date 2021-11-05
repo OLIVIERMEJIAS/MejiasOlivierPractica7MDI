@@ -39,7 +39,7 @@ namespace Mejías_Olivier___Práctica_5
             this.btnElimCli = new System.Windows.Forms.Button();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvwClientes = new System.Windows.Forms.ListView();
             this.clmCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clnCedula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clnNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,12 +47,11 @@ namespace Mejías_Olivier___Práctica_5
             this.clnApellido2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clnEntradComp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clnActivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lvwEntradas = new System.Windows.Forms.ListView();
             this.clnEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cliEntrada = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clnTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clnValor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnListarTodosCli = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDatoCedulaCliente
@@ -90,24 +89,24 @@ namespace Mejías_Olivier___Práctica_5
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(197, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "NOMBRE *";
+            this.label2.Text = "NOMBRE ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(298, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "PRIMER APELLIDO *";
+            this.label3.Text = "PRIMER APELLIDO ";
             // 
             // btnListarCli
             // 
-            this.btnListarCli.Location = new System.Drawing.Point(56, 133);
+            this.btnListarCli.Location = new System.Drawing.Point(56, 118);
             this.btnListarCli.Name = "btnListarCli";
-            this.btnListarCli.Size = new System.Drawing.Size(100, 19);
+            this.btnListarCli.Size = new System.Drawing.Size(100, 34);
             this.btnListarCli.TabIndex = 7;
             this.btnListarCli.Text = "LISTAR";
             this.btnListarCli.UseVisualStyleBackColor = true;
@@ -115,21 +114,21 @@ namespace Mejías_Olivier___Práctica_5
             // 
             // btnElimCli
             // 
-            this.btnElimCli.Location = new System.Drawing.Point(177, 133);
+            this.btnElimCli.Location = new System.Drawing.Point(177, 120);
             this.btnElimCli.Name = "btnElimCli";
-            this.btnElimCli.Size = new System.Drawing.Size(100, 45);
+            this.btnElimCli.Size = new System.Drawing.Size(100, 77);
             this.btnElimCli.TabIndex = 8;
-            this.btnElimCli.Text = "ELIMINAR";
+            this.btnElimCli.Text = "ELIMINAR (click antes en la lista)";
             this.btnElimCli.UseVisualStyleBackColor = true;
             this.btnElimCli.Click += new System.EventHandler(this.btnElimCli_Click);
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(301, 133);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(301, 118);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(100, 45);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(100, 79);
             this.btnAgregarCliente.TabIndex = 9;
-            this.btnAgregarCliente.Text = "AGREGAR *";
+            this.btnAgregarCliente.Text = "AGREGAR ";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
@@ -143,9 +142,9 @@ namespace Mejías_Olivier___Práctica_5
             this.label4.TabIndex = 10;
             this.label4.Text = "Obligatorio siempre";
             // 
-            // listView1
+            // lvwClientes
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwClientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmCliente,
             this.clnCedula,
             this.clnNombre,
@@ -153,13 +152,13 @@ namespace Mejías_Olivier___Práctica_5
             this.clnApellido2,
             this.clnEntradComp,
             this.clnActivo});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(56, 203);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(721, 235);
-            this.listView1.TabIndex = 11;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvwClientes.HideSelection = false;
+            this.lvwClientes.Location = new System.Drawing.Point(56, 203);
+            this.lvwClientes.Name = "lvwClientes";
+            this.lvwClientes.Size = new System.Drawing.Size(721, 235);
+            this.lvwClientes.TabIndex = 11;
+            this.lvwClientes.UseCompatibleStateImageBehavior = false;
+            this.lvwClientes.View = System.Windows.Forms.View.Details;
             // 
             // clmCliente
             // 
@@ -193,35 +192,26 @@ namespace Mejías_Olivier___Práctica_5
             // 
             this.clnActivo.Text = "Activo";
             // 
-            // listView2
+            // lvwEntradas
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clnEvento,
-            this.cliEntrada,
+            this.lvwEntradas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clnTipo,
+            this.clnEvento,
             this.clnValor});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(416, 12);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(361, 185);
-            this.listView2.TabIndex = 12;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lvwEntradas.HideSelection = false;
+            this.lvwEntradas.Location = new System.Drawing.Point(416, 12);
+            this.lvwEntradas.Name = "lvwEntradas";
+            this.lvwEntradas.Size = new System.Drawing.Size(361, 185);
+            this.lvwEntradas.TabIndex = 12;
+            this.lvwEntradas.UseCompatibleStateImageBehavior = false;
+            this.lvwEntradas.View = System.Windows.Forms.View.Details;
             // 
             // clnEvento
             // 
-            this.clnEvento.DisplayIndex = 2;
             this.clnEvento.Text = "Evento";
-            // 
-            // cliEntrada
-            // 
-            this.cliEntrada.DisplayIndex = 0;
-            this.cliEntrada.Text = "Entrada";
-            this.cliEntrada.Width = 61;
             // 
             // clnTipo
             // 
-            this.clnTipo.DisplayIndex = 1;
             this.clnTipo.Text = "Tipo";
             this.clnTipo.Width = 66;
             // 
@@ -230,23 +220,24 @@ namespace Mejías_Olivier___Práctica_5
             this.clnValor.Text = "Valor (colones)";
             this.clnValor.Width = 131;
             // 
-            // button1
+            // btnListarTodosCli
             // 
-            this.button1.Location = new System.Drawing.Point(56, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 19);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "LISTAR TODOS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnListarTodosCli.Location = new System.Drawing.Point(56, 159);
+            this.btnListarTodosCli.Name = "btnListarTodosCli";
+            this.btnListarTodosCli.Size = new System.Drawing.Size(100, 38);
+            this.btnListarTodosCli.TabIndex = 13;
+            this.btnListarTodosCli.Text = "LISTAR TODOS";
+            this.btnListarTodosCli.UseVisualStyleBackColor = true;
+            this.btnListarTodosCli.Click += new System.EventHandler(this.btnListarTodosCli_Click);
             // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnListarTodosCli);
+            this.Controls.Add(this.lvwEntradas);
+            this.Controls.Add(this.lvwClientes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAgregarCliente);
             this.Controls.Add(this.btnElimCli);
@@ -276,19 +267,18 @@ namespace Mejías_Olivier___Práctica_5
         private System.Windows.Forms.Button btnElimCli;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvwClientes;
         private System.Windows.Forms.ColumnHeader clmCliente;
         private System.Windows.Forms.ColumnHeader clnCedula;
         private System.Windows.Forms.ColumnHeader clnNombre;
         private System.Windows.Forms.ColumnHeader clnApellido1;
         private System.Windows.Forms.ColumnHeader clnApellido2;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lvwEntradas;
         private System.Windows.Forms.ColumnHeader clnEntradComp;
         private System.Windows.Forms.ColumnHeader clnActivo;
         private System.Windows.Forms.ColumnHeader clnEvento;
-        private System.Windows.Forms.ColumnHeader cliEntrada;
         private System.Windows.Forms.ColumnHeader clnTipo;
         private System.Windows.Forms.ColumnHeader clnValor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnListarTodosCli;
     }
 }

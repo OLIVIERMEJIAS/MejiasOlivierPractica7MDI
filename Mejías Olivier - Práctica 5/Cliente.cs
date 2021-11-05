@@ -14,10 +14,12 @@ namespace Mejías_Olivier___Práctica_5
         string nombre;
         string apellido1;
         string apellido2;
-        int entradasCompradas;
+        int entradasDisponibles;
         bool activo;
-        Entrada[] misEntradas;
-
+        ArrayList misEntradas;
+        /// <summary>
+        /// Construye una instancia cliente de tipo Cliente, con datos predeterminados
+        /// </summary>
         public Cliente()
         {
             ID += 1; 
@@ -25,11 +27,18 @@ namespace Mejías_Olivier___Práctica_5
             nombre = "";
             apellido1 = "";
             apellido2 = "";
-            entradasCompradas = 0;
+            entradasDisponibles = 3;
             activo = true;
-            misEntradas = new Entrada[3];
-        }
+            misEntradas = new ArrayList();
 
+        }
+        /// <summary>
+        /// Construye una instancia cliente de tipo Cliente, con algunos valores
+        /// inicializados de entrada del usuario
+        /// </summary>
+        /// <param name="ced"></param>
+        /// <param name="nom"></param>
+        /// <param name="ape1"></param>
         public Cliente(string ced,string nom,string ape1)
         {
             ID += 1;
@@ -37,30 +46,86 @@ namespace Mejías_Olivier___Práctica_5
             nombre = nom;
             apellido1 = ape1;
             apellido2 = "";
-            entradasCompradas = 0;
+            entradasDisponibles = 3;
             activo = true;
-            misEntradas = new Entrada[3];
-        }
+            misEntradas = new ArrayList();
 
+        }
+        /// <summary>
+        /// Resta entradas compradas al inicial de 3 disponibles para compra
+        /// </summary>
+        /// <param name="menosEntradas"></param>
+        public void modificarEntradasDisponibles(int menosEntradas)
+        {
+            entradasDisponibles -= menosEntradas;
+        }
+        /// <summary>
+        /// Devuelve el atributo ID
+        /// </summary>
+        /// <returns></returns>
+        public int IDConsultar()
+        {
+            return ID;
+        }
+        /// <summary>
+        /// Devuelve el atributo cedula
+        /// </summary>
+        /// <returns></returns>
         public string cedulaConsultar()
         {
             return cedula;
         }
-        public bool quedanEntradas(int entradCompradas,int entradasVender)
+        /// <summary>
+        /// Devuelve el atributo nombre
+        /// </summary>
+        /// <returns></returns>
+        public string nombreConsultar()
         {
-            if (entradCompradas >= entradasVender)
-                return false;
-            else
-                return true;
+            return nombre;
         }
-
-        public void asignarEntradas(int Id, int entradCompradas, int entradasVender, string tipo)
+        /// <summary>
+        /// Devuelve el atributo apellido1
+        /// </summary>
+        /// <returns></returns>
+        public string ape1Consultar()
         {
-            if(quedanEntradas(entradCompradas,entradasVender) && tipo == "General")
-            {
-                
-                    
-            }
+            return apellido1;
+        }
+        /// <summary>
+        /// Devuelve el atributo apellido2
+        /// </summary>
+        /// <returns></returns>
+        public string ape2Consultar()
+        {
+            return apellido2;
+        }
+        public int entradCompConsultar()
+        {
+            return entradasDisponibles;
+        }
+        /// <summary>
+        /// Devuelve el atributo activo
+        /// </summary>
+        /// <returns></returns>
+        public bool activoConsultar()
+        {
+            return activo;
+        }
+        /// <summary>
+        /// Borra una entrada del objeto cliente, de su atributo array de entradas
+        /// </summary>
+        /// <param name="entrada"></param>
+        public void borrarEntrada(Entrada entrada)
+        {
+            misEntradas.RemoveAt(misEntradas.IndexOf(entrada));
+        }
+        /// <summary>
+        /// Devuelve el array de entrada que tiene  cada objeto Cliente como atributo
+        /// </summary>
+        /// <returns></returns>
+       public ArrayList entradasConsultar()
+        {
+            return misEntradas;
         }
     }
 }
